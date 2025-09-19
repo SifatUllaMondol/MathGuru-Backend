@@ -1,0 +1,11 @@
+<form method="post">
+  {% csrf_token %}
+  {% for q in questions %}
+    <p><strong>{{ forloop.counter }}. {{ q.question }}</strong></p>
+    <input type="text" name="answer_{{ q.id }}" required>
+  {% endfor %}
+  <h3>
+  {{type}}
+  </h3>
+  <button type="submit">Submit</button>
+</form>

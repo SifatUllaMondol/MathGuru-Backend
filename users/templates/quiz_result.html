@@ -1,0 +1,15 @@
+<h2>Quiz Results</h2>
+<ul>
+  {% for question, correct_answer, user_answer, correct in results %}
+    <li>
+      <strong>{{ question }}</strong><br>
+      Your answer: {{ user_answer }}<br>
+      Correct answer: {{ correct_answer }}<br>
+      {% if correct %}
+        ✅ Correct!
+      {% else %}
+        ❌ Incorrect
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>

@@ -1,0 +1,10 @@
+<h1>okkkk</h1>
+
+<form method="POST" action='/logout-page/'>
+    {% csrf_token %}
+    <button type="submit">Logout</button>
+</form>
+
+<form method="GET" action="{% url 'view_document' %}">
+    <button type="submit">Start Quiz</button>
+</form>
